@@ -1,15 +1,14 @@
-# our base image
-FROM alpine:3.5
+ # our base image
+FROM python:3.12-alpine
 
-# install Python and pip
-RUN apk add --update py2-pip
-
+# Create the destination directory in the container
+RUN mkdir -p /app/templates
 # copy files required for the app to run
-COPY templates/myindex.html /Users/sfkh0/PycharmProjects/Webpage Deakin/templates
-COPY favourite_arts.py /Users/sfkh0/PycharmProjects/Webpage Deakin/templates/
+COPY myindex.html /app/templates/
+COPY templates /app/templates/
 
 # tell the port number the container should expose
 EXPOSE 5000
 
 # run the application
-CMD ["python", "/Users/sfkh0/PycharmProjects/Webpage Deakin/templates/favourite_arts.py"]
+CMD ["python", "/app/templates/favourite_arts.py"]
