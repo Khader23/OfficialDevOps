@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # our base image
+=======
+ # our base image
+>>>>>>> origin/main
 FROM python:3.12-alpine
 
 # Create the destination directory in the container
@@ -11,4 +15,8 @@ COPY templates /app/templates/
 EXPOSE 5000
 
 # run the application
+<<<<<<< HEAD
 CMD ["python", "/app/templates/favourite_arts.py"]
+=======
+CMD ["python", "/app/templates/favourite_arts.py"]
+>>>>>>> origin/main
