@@ -2,6 +2,8 @@
 FROM python:3.12-alpine
 #  installation of curl to use curl function
 RUN apk add --no-cache curl
+# destination directory set
+RUN mkdir -p /var/jenkins_home/plugins
 
 RUN curl -L -o /var/jenkins_home/plugins/sonar-cloud.hpi https://github.com/SonarSource/sonar-cloud-plugin/releases/latest/download/sonar-cloud.hpi
 
