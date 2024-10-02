@@ -11,8 +11,8 @@ COPY templates /app/templates/
 
 # To create a working directory for the container to execute file
 WORKDIR /app/templates
-# Install flask in the container
-RUN pip install flask
+ 
+
 # tell the port number the container should expose
 EXPOSE 5000
 
