@@ -1,5 +1,7 @@
  # our base image
 FROM python:3.12-alpine
+#  installation of curl to use curl function
+RUN apk add --no-cache curl
 
 RUN curl -L -o /var/jenkins_home/plugins/sonar-cloud.hpi https://github.com/SonarSource/sonar-cloud-plugin/releases/latest/download/sonar-cloud.hpi
 
@@ -11,7 +13,7 @@ COPY templates /app/templates/
 
 # To create a working directory for the container to execute file
 WORKDIR /app/templates
- 
+
 
 # tell the port number the container should expose
 EXPOSE 5000
