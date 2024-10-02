@@ -23,5 +23,5 @@ EXPOSE 5000
 # The python script is copied and sent to the /app/templates/
 COPY favourite_arts.py /app/templates/
 # run the application
-CMD ["python", "favourite_arts.py"]
+CMD ["python", "-m", "http.server", "5000"]
 
