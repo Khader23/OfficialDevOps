@@ -18,7 +18,7 @@ WORKDIR /app/templates
 
 
 # tell the port number the container should expose
-# EXPOSE 5000
+EXPOSE 5000
 
 # The python script is copied and sent to the /app/templates/
 COPY favourite_arts.py /app/templates/
