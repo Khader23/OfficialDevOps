@@ -11,7 +11,7 @@ RUN curl -L -o /var/jenkins_home/plugins/sonar-cloud.hpi https://github.com/Sona
 # Create the destination directory in the container
 RUN mkdir -p /app/templates
 
-COPY myindex.html /app/templates/
+COPY templates/ /app/templates/
 # Copies local diretory files from templates to the file directory created by Docker builds
 # COPY templates/ /app/templates/
 
